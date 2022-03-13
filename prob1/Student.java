@@ -37,7 +37,7 @@ public class Student {
 		Student s = (Student)ob;
 		return s.firstName.equals(firstName) && s.lastName.equals(lastName);
 	}
-	//Overriding the hashcode
+	//Overriding the hashcode method
 	@Override
 	public int hashCode(){
 		return Objects.hash(firstName,lastName);

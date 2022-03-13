@@ -5,6 +5,9 @@ import java.util.List;
 public class Admin {
 
 	public static HashMap<Key, Student> processStudents(List<Student> students) {
+		if(students.size() == 0){
+			return null;
+		}
 		//creating HashMap to store the key and student object
 		HashMap<Key,Student> list = new HashMap<>();
 
@@ -15,6 +18,9 @@ public class Admin {
 		return list;
 	}
 	public static double computeAverageGPA(HashMap<Key,Student> maps){
+		if(maps.isEmpty()){
+			return 0.0;
+		}
 		//looping the HashMap and calculate the GPA
 		double average = 0.0, sum = 0.0;
 		int count = 0;
